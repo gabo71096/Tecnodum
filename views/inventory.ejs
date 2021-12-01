@@ -1,0 +1,87 @@
+<%- include("head") %>
+
+<div class="title mb-3">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand d-flex" href="/">
+        <img src="images/favicon/icon.png" alt="" width="32" height="32" class="me-1">
+        Tecnodum
+      </a>
+  
+      <!-- Collapse toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+        <!-- First group of nav links -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="/about" class="nav-link">Acerca</a>
+          </li>
+          <li class="nav-item">
+            <a href="/help" class="nav-link">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a href="/store" class="nav-link">Tienda</a>
+          </li>
+        </ul>
+  
+        <!-- Login, register and shopping cart -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="login" class="nav-link active">
+              <span class="material-icons" data-toggle="tooltip" title="Iniciar sesión">account_circle</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cart" class="nav-link">
+              <span class="material-icons" data-toggle="tooltip" title="Carrito de compras">shopping_cart</span>
+            </a>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="faq">
+  <div class="text-center mb-5">
+    <h1 class="fw-normal">Hi <%= name %>, here's the inventory.</h1>
+  </div>
+  <% if (docs) { %>
+    <table class="table table-bordered table-hover table-striped mb-5">
+      <thead>
+        <tr>
+          <th scope="col">Marca</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% docs.forEach(function(doc) { %>
+          <tr>
+            <td><%= doc.marca %></td>
+            <td><%= doc.modelo %></td>
+            <td><%= doc.stock %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <div class="text-center mb-5">
+      <h1 class="fw-normal">No hay datos en la DB</h1>
+    </div>
+  <% } %>
+  <div class="text-center mb-5">
+    <a href="/login" class="btn btn-outline-danger float-end">Volver atrás</a>
+  </div>
+</div>
+
+<%- include("footer") %>

@@ -1,0 +1,165 @@
+/* Global styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* index styles */
+.destacado {
+  height: 400px;
+  width: 300px;
+}
+
+@media (max-width: 576px) {
+  .contactDiv {
+    width: 90%;
+  }
+}
+
+@media (min-width: 576px) {
+  .contactDiv {
+    width: 80%;
+  }
+}
+
+/* navbar styles */
+.title {
+  padding: 1% 2%;
+}
+
+/* aboutUs  styles */
+.aboutUs {
+  margin: 0 auto 3rem;
+  max-width: 85%;
+}
+
+/* faq styles */
+@media (min-width: 576px) {
+  .faq {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* addproducts styles */
+.addProducts {
+  max-width: 700px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* store styles */
+
+@media (min-width: 768px) {
+  .categories {
+    height: fit-content;
+    width: 200px;
+  }
+
+  #accordion {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories {
+    display: none;
+  }
+
+  #accordion {
+    display: block;
+  }
+}
+
+a.product {
+  width: 100%;
+  height: 100%;
+}
+
+.product:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s linear;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 15rem);
+  gap: 1rem;
+  justify-content: center;
+}
+
+.prodGrid {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.imgDiv {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.headerDiv {
+  height: 40px;
+}
+
+.productImg {
+  max-height: 100px;
+  max-width: 100%;
+}
+
+/* Prod showcase styles */
+.prodRow {
+  width: 85%;
+  margin: 0 auto 3rem;
+}
+
+.maxHeight {
+  max-height: 400px;
+}
+
+@media (max-width: 992px) {
+  .prodImg {
+    margin: 0 0 1.5rem !important;
+  }
+}
+
+input[name="quantity"] {
+  display: inline;
+  width: 4rem;
+}
+
+/* Shopping cart styles */
+
+@media (min-width: 576px) {
+  .cartRow {
+    width: 80%;
+  }
+}
+
+.imgContainer {
+  height: 100px;
+  width: 250px;
+}
+
+.cartInfo {
+  width: 250px;
+}
+
+.cartImg {
+  max-height: 100px;
+  max-width: 100%;
+}

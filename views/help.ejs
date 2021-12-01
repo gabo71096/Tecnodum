@@ -1,0 +1,126 @@
+<%- include("head") %>
+
+<div class="title mb-3">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand d-flex" href="/">
+        <img src="images/favicon/icon.png" alt="" width="32" height="32" class="me-1">
+        Tecnodum
+      </a>
+
+      <!-- Collapse toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- First group of nav links -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="/about" class="nav-link">Acerca</a>
+          </li>
+          <li class="nav-item">
+            <a href="/help" class="nav-link active">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a href="/store" class="nav-link">Tienda</a>
+          </li>
+        </ul>
+
+        <!-- Login, register and shopping cart -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="login" class="nav-link">
+              <span class="material-icons" data-toggle="tooltip" title="Iniciar sesión">account_circle</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cart" class="nav-link">
+              <span class="material-icons" data-toggle="tooltip" title="Carrito de compras">shopping_cart</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="text-center faq mb-5">
+  <h1 class="fw-normal">Preguntas frecuentes</h1>
+</div>
+
+<div class="shadow faq">
+  <div class="accordion accordion-flush" id="faqAccordion">
+    <div class="accordion-item">
+      <h1 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          ¿Cómo registro mi usuario?
+        </button>
+      </h1>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p class="mb-0">En la barra de navegación, debe presionar el botón<span
+            class="material-icons mx-1" data-toggle="tooltip" title="Iniciar sesión">account_circle</span>,
+            ingresar su correo electrónico, contraseña y finalmente presionar el botón "Registrarse".</p>
+          <p class="mb-0">También puede registrarse con su cuenta Google.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h1 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          ¿Cómo inicio sesión?
+        </button>
+      </h1>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+        data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p class="mb-0">En la barra de navegación, debe presionar el botón<span class="material-icons mx-1"
+            data-toggle="tooltip" title="Iniciar sesión">account_circle</span>, ingresar su correo, contraseña, y
+            finalmente presionar el botón "Iniciar Sesión".</p>
+          <p class="mb-0">También puede iniciar sesión con su cuenta Google.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h1 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          ¿Qué necesito para registrarme?
+        </button>
+      </h1>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+        data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p class="mb-0">Solamente necesitas escribir tu nombre completo, email y contraseña.</p>
+          <p class="mb-0">O bien puedes registrarte con tu cuenta de Google, en caso de que poseas una.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h1 class="accordion-header" id="flush-headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          ¿Por qué no puedo comprar?
+        </button>
+      </h1>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+        data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p class="mb-0">Actualmente este proyecto está en estado de desarrollo, no hemos integrado aún métodos
+            de pago, y probablemente no lo hagamos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("footer") %>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/4d0a5e3830.js" crossorigin="anonymous"></script>
+
+  <!-- Title -->
+  <title>Tecnodum</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../images/favicon/icon.png" type="image/png">
+
+</head>
+
+<body class="bg-light bg-gradient h-100 d-flex flex-column">
+
+<div class="title mb-3">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand d-flex" href="/">
+        <img src="../images/favicon/icon.png" alt="" width="32" height="32" class="me-1">
+        Tecnodum
+      </a>
+  
+      <!-- Collapse toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+        <!-- First group of nav links -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="/about" class="nav-link">Acerca</a>
+          </li>
+          <li class="nav-item">
+            <a href="/help" class="nav-link">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a href="/store" class="nav-link active">Tienda</a>
+          </li>
+        </ul>
+  
+        <!-- Login, register and shopping cart -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/login" class="nav-link">
+              <span class="material-icons" data-toggle="tooltip" title="Iniciar sesión">account_circle</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/cart" class="nav-link">
+              <span class="material-icons" data-toggle="tooltip" title="Carrito de compras">shopping_cart</span>
+            </a>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="row prodRow bg-body p-5 rounded shadow">
+  <div class="col-lg-6 text-center my-auto prodImg">
+    <img src="../<%= doc.imagen %>" alt="" class="img-fluid rounded maxHeight">
+  </div>
+  <div class="col-lg-6 d-flex flex-column">
+    <h1><%= doc.marca %> <%= doc.modelo %></h1>
+    <p>ID: <%= doc.id %></p>
+    <p>STOCK: <%= doc.stock %></p>
+    <p>Categoría: <%= doc.categoria %></p>
+    <p><%= doc.comentario %></p>
+    <h1 class="h3 mt-auto mb-3"><%= doc.precio.toLocaleString('es-CL', {style: "currency", currency: "CLP"}) %></h3>
+    <% if(message) { %>
+      <div class="alert alert-success" role="alert">
+        <%= message %>
+      </div>
+    <% } %>
+    <form class="mt-auto mb-3 d-flex" action="/product/<%= doc.id %>-<%= _.kebabCase(doc.marca) %>-<%= _.kebabCase(doc.modelo) %>" method="post">
+      <input type="number" name="quantity" class="form-control me-1" min="1" max="<%= doc.stock %>" value="1">
+      <button type="submit" class="btn btn-outline-success"><i class="fas fa-cart-plus me-1"></i>Añadir al carrito</button>
+    </form>
+  </div>
+</div>
+
+<div class="container mt-auto">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <img src="../images/favicon/icon.png" alt="" width="32" height="32">
+      </a>
+      <span class="text-muted">&reg Tecnodum 2021</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-facebook fa-lg"></i></a></li>
+    </ul>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

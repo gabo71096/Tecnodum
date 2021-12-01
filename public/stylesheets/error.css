@@ -1,0 +1,29 @@
+/* Error page styles */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  font-family: "Elsie Swash Caps", cursive;
+}
+
+div {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.75rem;
+  font-weight: 900;
+}
+
+img {
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto 2rem;
+}

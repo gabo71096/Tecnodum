@@ -1,0 +1,66 @@
+/* Signin and signup styles */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  max-width: 75%;
+  margin: 1rem auto;
+}
+
+i {
+  padding-right: 0.25rem;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  padding: 10px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 1;
+}
+
+#rname {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#remail {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+
+#rpassword {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+
+#rpassword2 {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#lemail {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#lpassword {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
